@@ -30,6 +30,14 @@ public class BikeRentalService {
         availableBikes.get(bike).put(date, user);
     }
 
+    public void rentBike(User user, Bike bike, LocalDate date){
+        if(showPersonWhoReserveBike(user, bike, date) == user){
+            user.addToRentHistoryList(date, bike);
+            user.addToActualRentedBikesList(date, bike);
+            System.out.println("Wypożycozno rower");
+        }
+    }
+
     public void cancelReservation(User user, Bike bike, LocalDate date){
         isBikeInOffer(bike);  // sprawdzenie, czy rower jest w ofercie
 
@@ -81,6 +89,15 @@ public class BikeRentalService {
             }
         }
         return false;
+    }
+
+    private User showPersonWhoReserveBike(User user, Bike bike, LocalDate date){
+        Map<LocalDate, User> reservationsMap = availableBikes.get(bike);
+        if(reservationsMap.containsValue(user)){
+            return user;
+        }else {
+            throw new IllegalArgumentException("Taka osoba nie zrobiła wecześniejszej rezerwacji");
+        }
     }
 
 
