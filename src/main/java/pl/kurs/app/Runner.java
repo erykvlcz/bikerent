@@ -12,6 +12,7 @@ public class Runner {
         Bike bike2 = new Bike("skladak2");
         User user = new User("Seba", 20);
         User user2 = new User("Zbychu", 40);
+        User user3 = new User("Tomek", 27);
         BikeRentalService service = new BikeRentalService("Bikerrents");
 
         service.addBikeToRent(bike);
