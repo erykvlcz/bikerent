@@ -4,8 +4,9 @@ public class Bike {
     private String id;
     private String color;
 
-    public Bike(String id) {
+    public Bike(String id, String color) {
         this.id = id;
+        this.color = color;
     }
 
     public void repaintBike(String newColor) {
