@@ -13,11 +13,10 @@ public class Runner {
         User user = new User("Seba");
         User user2 = new User("Zbychu");
         BikeRentalService service = new BikeRentalService("Bikerrents");
+
         service.addBikeToRent(bike);
         service.addBikeToRent(bike2);
         service.reserveBike(bike, LocalDate.of(2020, 5, 13), user);
-        service.reserveBike(bike, LocalDate.of(2020, 5, 14), user2);
-        service.cancelReservation(user2, bike2, LocalDate.of(2020, 5, 13));
-        service.showAvailableDays(bike);
+        service.rentBike(user, bike2, LocalDate.of(2020, 5, 13));
     }
 }

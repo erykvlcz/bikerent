@@ -1,11 +1,27 @@
 package pl.kurs.models;
 
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class User {
     private String name;
+    private Map<LocalDate, Bike> rentHistoryList = new HashMap<>();
+    private Map<LocalDate, Bike> actualRentedBikesList = new HashMap<>();
 
     public User(String name) {
         this.name = name;
     }
+
+    public void addToRentHistoryList(LocalDate localDate, Bike bike){
+        rentHistoryList.put(localDate, bike);
+    }
+
+    public void addToActualRentedBikesList(LocalDate localDate, Bike bike){
+        rentHistoryList.put(localDate, bike);
+    }
+
 
     @Override
     public String toString() {
