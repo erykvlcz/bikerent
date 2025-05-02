@@ -7,6 +7,7 @@ import java.util.Map;
 
 public class User {
     private String name;
+    private int age;
     private Map<LocalDate, Bike> rentHistoryList = new HashMap<>();
     private Map<LocalDate, Bike> actualRentedBikesList = new HashMap<>();
 
@@ -22,6 +23,13 @@ public class User {
         rentHistoryList.put(localDate, bike);
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     @Override
     public String toString() {
