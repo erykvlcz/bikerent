@@ -8,7 +8,7 @@ public class Bike {
         this.id = id;
     }
 
-    public int repaintBike(String newColor) {
+    public void repaintBike(String newColor) {
         this.color = newColor;
     }
 
