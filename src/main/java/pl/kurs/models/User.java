@@ -31,6 +31,14 @@ public class User {
         this.age = age;
     }
 
+    public Map<LocalDate, Bike> getRentHistoryList() {
+        return rentHistoryList;
+    }
+
+    public Map<LocalDate, Bike> getActualRentedBikesList() {
+        return actualRentedBikesList;
+    }
+
     @Override
     public String toString() {
         return "User{" +
