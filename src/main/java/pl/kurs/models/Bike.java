@@ -8,6 +8,10 @@ public class Bike {
         this.id = id;
     }
 
+    public int repaintBike(String newColor) {
+        this.color = newColor;
+    }
+
     @Override
     public String toString() {
         return "Bike{" +
