@@ -15,7 +15,7 @@ public class Bike {
     @Override
     public String toString() {
         return "Bike{" +
-                "id='" + id + '\'' +
+                "id= '" + id + '\'' +
                 '}';
     }
 }
