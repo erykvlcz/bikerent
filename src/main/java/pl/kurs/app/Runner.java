@@ -8,8 +8,8 @@ import java.time.LocalDate;
 
 public class Runner {
     public static void main(String[] args) {
-        Bike bike = new Bike("skladak1");
-        Bike bike2 = new Bike("skladak2");
+        Bike bike = new Bike("skladak1", "biały");
+        Bike bike2 = new Bike("skladak2", "czarny");
         User user = new User("Seba");
         User user2 = new User("Zbychu");
         BikeRentalService service = new BikeRentalService("Bikerrents");
