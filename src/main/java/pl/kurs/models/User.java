@@ -11,8 +11,9 @@ public class User {
     private Map<LocalDate, Bike> rentHistoryList = new HashMap<>();
     private Map<LocalDate, Bike> actualRentedBikesList = new HashMap<>();
 
-    public User(String name) {
+    public User(String name, int age) {
         this.name = name;
+        this.age = age;
     }
 
     public void addToRentHistoryList(LocalDate localDate, Bike bike){
